@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="../abc.css">
+    <link rel="stylesheet" href="abc/def.css">
+
 </head>
 <body>
 
+<h1> Cách 3 nhúng css vào html ( external css )</h1>
+<pre>
+    Nhúng thông qua thẻ link của html trong thẻ head
+    thẻ link có rel="stylesheet" và href="đường dẫn của file css"
+
+    - 2 loại đường dẫn để liên kết file vào trong html
+    + đường dẫn tuyệt đối : đường dẫn theo ổ đĩa, theo domain
+    https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+    + đường dẫn tương đối :
+    nếu truy cập ra folder bên ngoài sử dụng ../
+    mỗi 1 lần back ra ngoài 1 cấp thì sẽ sử dụng ../
+    ví dụng nếu file css nằm ở folder bên ngoài 2 cấp : ../../
+
+    Còn nếu truy cập vào cấp bên trong đi theo đường dẫn của folder
+
+</pre>
+
+<div>Nội dung của thẻ div</div>
+<p>Nội dung của thẻ p</p>
 </body>
 </html>
