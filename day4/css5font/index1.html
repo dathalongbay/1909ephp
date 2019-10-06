@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+        div {
+            margin-bottom: 20px;
+            border: 1px solid green;
+        }
+        #demo1 {
+            font-family: "Times New Roman", Times, Serif;
+        }
+
+        #demo2 {
+            font-family: Arial, Sans-serif;
+        }
+
+        #demo3 {
+            font-family: "Lucida Console";
+        }
+
+    </style>
+</head>
+<body>
+<pre>
+    font-family: kiểu font
+
+    trong css, có 2 kiểu tên font family :
+    kiểu 1 : tên chung - 1 nhóm các kiểu font có kiểu hiển thị tương tự nhau
+    ( ví dụ serif và monospace )
+    kiểu 2 : 1 tên font cụ thể ( ví dụ "time new roman" hoặc "arial" )
+
+    ví dụ thẻ p có phần css như sau :
+    font-family: "Times New Roman", Times, serif;
+    * chú ý 1 : khi viết code css cho thuộc tính font-family nếu tên font mà
+    nhiều hơn 1 từ thì sẽ phải đặt tên font trong ""
+    ví dụ "Times New Roman" nếu tên font chỉ có 1 từ duy nhất thì ko cần dùng ""
+    * chú ý 2 : khi khai báo kiểu font của 1 selector trong css
+    thì sẽ khai báo nhiều kiểu font theo thứ tự
+    font-family: "Times New Roman", Times, serif;
+    ví dụ máy tính tìm "Times New Roman" để hiển thị
+    nếu font này không có thì tìm tiếp font Times
+    trong TH Times trên máy ko tồn tại
+    thì máy tính sẽ tìm 1 font bất kỳ thuộc nhóm font serif để hiển thị
+    và quy tắc là đặt tên font cụ thể đầu tiều , đặt tên theo kiểu nhóm như là
+    serif hoặc san-serif ở cuối cùng
+
+</pre>
+
+<div id="demo1">
+    Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.
+</div>
+<div id="demo2">
+    Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.
+</div>
+<div id="demo3">
+    Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh.
+</div>
+</body>
+</html>
