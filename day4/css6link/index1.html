@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+        a {
+            text-decoration: none;
+        }
+        /**
+        #menu đang chứa các thẻ a
+        hay nói cách khác
+        các thẻ a nằm #menu sẽ chịu ảnh hưởng của đoạn css nằm trong {}
+         */
+        #menu a:link {
+            color: green;
+        }
+        #menu a:visited {
+            color: black;
+        }
+        #menu a:hover {
+            color: orange;
+        }
+        #menu a:active {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<pre>
+    4 trạng thái của thẻ link ( thẻ a )
+    a:link - thông thường và link chưa được người dùng click
+    a:visited - 1 link mà người dùng đã click vào
+    a:hover - người dùng đang di chuột vào thẻ a đó
+    a:active - rất ngắn khi người đang click chuột vào thẻ a
+</pre>
+
+<nav id="menu">
+    <ul>
+        <li><a href="trangchu.html">trang chủ</a></li>
+        <li><a href="gioithieu.html">giới thiệu</a></li>
+        <li><a href="sanpham.html">sản phẩm</a></li>
+        <li><a href="tintuc.html">tin tức</a></li>
+        <li><a href="lienhe.html">liên hệ</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>
