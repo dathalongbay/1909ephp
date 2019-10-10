@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="resetcss.css">
+
+    <style type="text/css">
+        .container {
+            height: 300px;
+            border: 1px solid red;
+        }
+
+        #float1 {
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            float: right;
+        }
+
+        #float2 {
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    thuộc tính float ( trôi ) trong css
+    thuộc tính float có 3 giá trị chính
+    1 - left trôi sang trái
+    2 - right trôi sang phải
+    3 - none ( mặc định ) không trôi
+    *** chú ý :
+    khi 1 thẻ float sang trái hay sang phải nếu màn hình vẫn còn phần để hiển thị
+    thì thẻ bên cạnh nó sẽ bị ảnh hưởng trôi sang trái hoặc trôi sang phải theo thẻ
+    bị float đó
+    ví dụ thẻ A nằm canh thẻ B
+    thì thẻ A bị float:right thì thẻ B sẽ bị thẻ A ảnh hương trôi theo sang bên tay phải
+
+</pre>
+
+<div class="container">
+    <div id="float1">
+        div 1
+    </div>
+
+    <div id="float2">
+        div 2
+    </div>
+</div>
+
+</body>
+</html>
