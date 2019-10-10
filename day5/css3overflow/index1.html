@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .box {
+            border: 1px solid black;
+            margin-bottom: 700px;
+            height: 170px;
+        }
+
+        #container1 {
+            overflow: visible;
+        }
+
+        #container2 {
+            overflow: hidden;
+        }
+
+        #container3 {
+            overflow: scroll;
+        }
+
+        #container4 {
+            overflow: auto;
+        }
+
+        #container5 {
+            overflow: auto;
+        }
+        
+        #container6 {
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+
+<pre>
+    thuộc tính css overflow ?
+    The CSS overflow property controls what happens to content that is too big to fit into an area.
+    Thuộc tính overflow kiểm soát chuyện gì sẽ xảy ra khi mà phần nội dung bên trong 1 thẻ html vượt quá kích cỡ của thẻ chứa nó
+    có 4 giá trị cho thuộc tính overflow
+    1 - visible ( hiển thị và đây là giá trị mặc định )
+    2 - hidden ( ẩn )
+    3 - scroll ( hiện con cuộn chuột )
+    4 - auto ( nếu phần content vừa đủ thì không hiện thanh scrollbar
+    nếu content vượt quá kích cỡ của thẻ thì sữ hiện thanh scrollbar )
+</pre>
+
+<div id="container1" class="box">
+    <h1>visibile</h1>
+    Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+</div>
+
+<div id="container2" class="box">
+    <h1>hidden</h1>
+    Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+</div>
+
+<div id="container3" class="box">
+    <h1>scroll</h1>
+    Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+</div>
+
+<div id="container4" class="box">
+    <h1>auto nhưng nội dung vừa đủ</h1>
+    Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl
+</div>
+
+<div id="container5" class="box">
+    <h1>auto nhưng nội dung rất lớn</h1>
+    Donec rutrum congue leo eget malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+</div>
+
+<div id="container6" class="box">
+    <h1>scroll nhưng nội dung rất ngắn</h1>
+    Donec rutrum congue
+</div>
+</body>
+</html>
