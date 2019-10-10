@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<pre>
+    Đơn vị em và đơn vị pixel
+    1 - Ở trạng thái mặc định khi thẻ html nằm trực tiếp trong thẻ body
+    hoặc không chịu ảnh hưởng font size của các thẻ bên trên nó
+    thì nó sẽ lấy công thức mặc định 1em=16px
+    2 - Khi mà 1 thẻ con năm trong 1 thẻ cha và thẻ cha được đặt 1 kích cỡ
+    font-size cụ thể
+    thì thẻ con khi đặt kích cỡ theo đơn vị em
+    sẽ lấy công thức font-size của thẻ cha * số em của thẻ con
+    vì dụ
+    thẻ cha có font-size là 20px
+    thẻ con có font-size là 2em => 20*2 = 40pixel
+    ví dụ 2
+    thẻ cha có font-size là 10px
+    thẻ con có font-size là 2em => 10px*2em = 20pixel
+    3 - khi có từ 3 thẻ lồng nhau trở lên
+    thì thẻ con có đơn vị là em sẽ tìm lên bên trên khi gặp thẻ cấp bên trên
+    nào mà co kích cỡ font-size cụ thể thì nó sẽ lấy font-size qui đôi thành 1em
+    ví du:
+    thẻ con p nằm trong 1 thẻ div và thẻ div nằm trong thẻ section
+    section > div > p
+    khi mà p có font-size:2em
+    nhưng div cha lại ko đc đặt font-size cụ thể
+    thì thẻ p sẽ tìm lên các cấp bên trên và gặp thẻ section có font-size:12px
+    thì bây giờ thẻ p : 12*2em = 24pixel
+</pre>
+
+</body>
+</html>
