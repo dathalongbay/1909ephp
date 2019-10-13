@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #target {
+            border: 1px solid orange;
+            padding: 20px 0;
+        }
+
+        #target::before {
+            content: "Nội dung thêm bằng css phía trước bên trong thẻ được chọn";
+            color: red;
+        }
+
+        #target::after {
+            content: "Nội dung thêm bằng css phía sau bên trong thẻ được chọn";
+            color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+
+<pre>
+    học kỹ thuật before và after trong css
+    - ::before được sử dụng để thêm 1 phần nội dung bằng css
+    vào trước thành phần html được chọn
+    đồng thời có thể dùng thể những thuộc tính css khác trong ::before
+    thông thường trong ::before có 1 thuộc tính là content
+    - ::after được sử dụng để thêm 1 phần nội dung bằng css
+    vào sau thành phần html được chọn
+    đồng thời có thể dùng thể những thuộc tính css khác trong ::before
+    thông thường trong ::before có 1 thuộc tính là content
+</pre>
+
+<div id="target">
+    Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Pellentesque in ipsum id orci porta dapibus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+</div>
+</body>
+</html>
