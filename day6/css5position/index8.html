@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="normalize.css">
+    <style type="text/css">
+        #parent {
+            width: 250px;
+            height: 250px;
+            background: orange;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+
+        #child {
+            background: green;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="parent">
+    <div id="child">
+        Thẻ div con
+    </div>
+</div>
+
+<pre>
+    trường hợp 1 thẻ html có position:absolute nhưng nó nằm trực tiếp trong thẻ body
+    hoặc các thẻ mẹ chứa nó lại có postion:static thì
+    thẻ html có có position:absolute sẽ lấy gốc tọa độ của màn hình hay nói cách khác
+    nó sẽ lấy gốc tọa độ thẻ body để đặt vị top,left,right,bottom
+</pre>
+</body>
+</html>
