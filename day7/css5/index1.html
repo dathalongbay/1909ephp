@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="normalize.css">
+
+    <style type="text/css">
+        .container {
+            width: 500px;
+            margin: 0 auto;
+            background-color: orange;
+        }
+
+        .container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        #target {
+            background-color: green;
+            color: white;
+            width: 100px;
+            height: 100px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="target">
+        Thẻ div #target
+    </div>
+</div>
+
+</body>
+</html>
