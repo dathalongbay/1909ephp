@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div.sticky {
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            background-color: #cae8ca;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+
+    <p>Thử scroll chuột để hiểu cách mà position:sticky hoạt động như thế nào</p>
+
+    <div class="sticky">tôi là sticky!</div>
+
+    <pre style="padding-bottom:2000px">
+        Một thẻ html mà có position:sticky nó sẽ đặt vị trí của nó dựa vào vị trí
+        khi người dùng scroll chuột
+
+        Một thẻ html sticky sẽ hoạt động giữa 2 trạng thái relative và fixed
+        Nó sẽ hoạt động như 1 thẻ position:relative cho đến khi người dùng
+        scroll chuột đến vị trí của nó. Lúc đó nó sẽ trở thành 1 position:fixed
+        cố định so với màn hình
+        Nếu bạn kéo chuột lên vị trí ban đầu trên cùng màn hình
+        nó sẽ trở về relative
+
+    </pre>
+
+</body>
+</html>
