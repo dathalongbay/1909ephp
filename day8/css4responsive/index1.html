@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="normalize.css">
+
+    <style type="text/css">
+        body {
+            background-color: yellow;
+        }
+
+        @media screen and (min-width: 600px){
+
+            body {
+                background-color: green;
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+<pre>
+    Kỹ thuật media query sẽ cho phép css chọn những mã css nào
+    áp dụng cho màn hình có kích cỡ nào
+    Ví dụ :
+    - màn hình từ 0px đến 600px sẽ áp dụng css cho body màu vàng
+    - màn hình từ 601px đến 900px sẽ áp dụng css cho body màu xanh
+    - màn hình từ 901px đến 1200px sẽ áp dụng css cho body màu tím
+    - màn hình từ 1200px sẽ áp dụng css cho body màu đỏ
+
+    @media screen and (min-width: 600px){
+        // css cho màn hình từ 600px trở lên ( 600 đến vô cực )
+    }
+
+    @media screen and (max-width: 600px){
+        // css cho màn hình từ 600px trở xuống ( 0 đến 600 )
+    }
+
+</pre>
+</body>
+</html>
