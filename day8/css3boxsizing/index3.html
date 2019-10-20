@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="normalize.css">
+
+    <style type="text/css">
+        #target1 {
+            background-color: green;
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+        }
+
+        #target2 {
+            background-color: orange;
+            width: 150px;
+            height: 150px;
+            padding-left: 30px;
+            padding-right: 40px;
+            border-left: 2px solid red;
+            border-right: 3px solid red;
+
+            padding-top: 10px;
+            padding-bottom: 20px;
+            border-top: 5px solid red;
+            border-bottom: 5px solid red;
+
+
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<pre>
+    CSS box-sizing là 1 thuộc tính css cho phép chúng ta có bao gồm phần
+    padding và border trong tổng chiều rộng và chiều dài của thẻ html hay không
+    Khi không sử dụng thuộc tính box-sizing
+    Mặc định chiều rộng và chiều dài của 1 thẻ được tính toán như sau :
+    width + padding left + padding right + border left + border right = chiều rộng
+    thực tế
+    height + padding top + padding bottom + border top + border bottom = chiều cao thực tế
+</pre>
+
+<div id="target1">
+    BOX 1
+</div>
+
+<div id="target2">
+    BOX 2
+</div>
+
+<pre>
+    Vấn đề khi đặt padding và border sẽ làm thay đổi width và height mà mình set ban đầu không còn như mong muốn ?
+    thuộc tính css box-sizing
+</pre>
+</body>
+</html>
