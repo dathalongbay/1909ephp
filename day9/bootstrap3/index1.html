@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <pre>
+        Các class cho cột hỗ trợ responsive trong bootstrap
+        Loại 1 :
+        .col- (extra small devices - screen width less than 576px)
+        Áp dụng cho màn hình nhỏ như mobile với độ rộng nhở hơn 576px
+        ví dụ : .col-1 , .col-2 , .col-3
+        Loại 2 :
+        .col-sm- (small devices - screen width equal to or greater than 576px)
+        Áp dụng màn hình nhỏ như samsung tab hay ipad với độ rộng màn hình bằng hoặc lớn
+        hơn 576px
+        Loại 3 :
+        .col-md- (medium devices - screen width equal to or greater than 768px)
+        Áp dụng màn hình trung binh như laptop có độ rộng băng hay lớn hơn 768px
+        Loại 4 :
+        .col-lg- (large devices - screen width equal to or greater than 992px)
+        Áp dụng cho màn hình lớn như PC với độ rộng bằng hay lớn hơn 992px
+        Loại 5
+        .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
+        Áp dụng cho mà hình siêu lớn như tivi hay máy chiếu ... với độ rộng màn hình bằng
+        1200px hay lớn 1200px
+    </pre>
+
+    <h1>Áp dụng cho mobile thực hành class có tiền tố là .col- </h1>
+    <pre>
+        Lưới bootstrap hỗ trợ 12 cột
+        => muốn sử dụng giao diện 1 cột bằng nhau : 12/số cột = 12 => .col-12
+        => muốn sử dụng giao diện 2 cột bằng nhau : 12/số cột = 6 => .col-6
+        => muốn sử dụng giao diện 3 cột bằng nhau : 12/số cột = 4 => .col-4
+        => muốn sử dụng giao diện 4 cột bằng nhau : 12/số cột = 3 => .col-3
+        => muốn sử dụng giao diện 5 cột bằng nhau : < không làm được >
+        => muốn sử dụng giao diện 6 cột bằng nhau : 12/số cột = 2 => .col-2
+        => muốn sử dụng giao diện 7 cột bằng nhau : < không làm được >
+        => muốn sử dụng giao diện 8 cột bằng nhau : < không làm được >
+        => muốn sử dụng giao diện 9 cột bằng nhau : < không làm được >
+        => muốn sử dụng giao diện 10 cột bằng nhau : < không làm được >
+        => muốn sử dụng giao diện 11 cột bằng nhau : < không làm được >
+        => muốn sử dụng giao diện 12 cột bằng nhau : 12/số cột = 1 => .col-1
+    </pre>
+
+    <div class="container">
+
+        <h1> Giao diện 1 cột </h1>
+
+        <div class="row">
+
+            <div class="col-12">
+                <h2>Cột 1</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+        </div>
+
+        <h1> Giao diện 2 cột </h1>
+
+        <div class="row">
+
+            <div class="col-6">
+                <h2>Cột 1</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-6">
+                <h2>Cột 2</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+        </div>
+
+
+        <h1> Giao diện 3 cột </h1>
+
+        <div class="row">
+
+            <div class="col-4">
+                <h2>Cột 1</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-4">
+                <h2>Cột 2</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-4">
+                <h2>Cột 3</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+        </div>
+
+
+
+        <h1> Giao diện 4 cột </h1>
+
+        <div class="row">
+
+            <div class="col-3">
+                <h2>Cột 1</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-3">
+                <h2>Cột 2</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-3">
+                <h2>Cột 3</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-3">
+                <h2>Cột 4</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+        </div>
+
+        <h1>Giao diện 6 cột</h1>
+
+        <div class="row">
+
+            <div class="col-2">
+                <h2>Cột 1</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-2">
+                <h2>Cột 2</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-2">
+                <h2>Cột 3</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-2">
+                <h2>Cột 4</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-2">
+                <h2>Cột 5</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+            <div class="col-2">
+                <h2>Cột 6</h2>
+                <p>Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
