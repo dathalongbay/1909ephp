@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        phạm vi của biến
+        Biến toàn cục và biến cục bộ
+        Biến toàn cục có ảnh hưởng trong toàn bộ chương trình
+        Biến cục bộ chỉ có tác dụng trong function
+    </pre>
+
+    <script type="text/javascript">
+
+        // Biến toàn cục khai báo bên ngoài function
+        var demo = 9;
+        function demoFun() {
+            var one = 7;
+            return one;
+        }
+
+        console.log("demo : " + demo);
+        console.log("one : " + one);
+    </script>
+
+</body>
+</html>
