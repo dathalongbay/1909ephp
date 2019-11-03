@@ -7,7 +7,29 @@
 <body>
     <pre>
         sự khác nhau của vòng lặp while và do while
+        => khi điều kiện chạy vòng lặp là true thì vòng lặp while mới thực thi
+        các câu lệnh trong {}
+        => nhưng trong lần chạy đầu tiên vòng lặp do while sẽ thực thi code trong {}
+        dù điều kiện có đúng hay không
+        từ lần chạy thứ 2 do while mới kiểm tra điều kiện
+        lần chạy số 1 nó không kiểm tra điều kiện chạy
+        => đây là sự khác biệt lớn nhất giữ vòng lặp while và do while
     </pre>
+    <script type="text/javascript">
+
+        console.log("vòng lặp while");
+        var i = 25;
+        while (i <= 20) {
+            console.log(i);
+        }
+
+        console.log("vòng lặp do while");
+        var j = 25;
+        do {
+            console.log(j);
+            j++;
+        } while(j <= 20);
+    </script>
 
 </body>
 </html>
