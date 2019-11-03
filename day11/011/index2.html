@@ -7,23 +7,22 @@
 <body>
 
     <pre>
-        phạm vi của biến
-        Biến toàn cục và biến cục bộ
-        Biến toàn cục có ảnh hưởng trong toàn bộ chương trình
-        Biến cục bộ chỉ có tác dụng trong function
+        tham số  trong cú pháp khi khai báo hàm : function(tham số)
+        cũng là 1 biến cục bộ không có ảnh hưởng bên ngoài function
     </pre>
 
     <script type="text/javascript">
 
         // Biến toàn cục khai báo bên ngoài function
         var demo = 9;
-        function demoFun() {
+        function demoFun(param) {
             var one = 7;
             return one;
         }
+        demoFun(12);
 
         console.log("demo : " + demo);
-        console.log("one : " + one);
+        console.log("one : " + param);
     </script>
 
 </body>
