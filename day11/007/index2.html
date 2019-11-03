@@ -6,8 +6,8 @@
 </head>
 <body>
     <pre>
-        Toán tử và : && ( thỏa mãn mọi điều kiện )
-        Toán tử hoặc : || ( chỉ cần thỏa mãn 1 trong các điều kiện )
+        Toán tử và : &&
+        Toán tử hoặc : ||
     </pre>
 
     <script type="text/javascript">
@@ -18,8 +18,12 @@
         var ly = 7;
         var hoa = 0.5;
         var diem = toan + ly + hoa;
-        if ( (diem > 15) && (toan => 1) && (ly => 1) && (hoa => 1)) {
-            console.log("đỗ");
+        if ( (diem > 15)) {
+            if ( (toan < 1) || (ly < 1) || (hoa < 1)) {
+                console.log("trượt");
+            } else {
+                console.log("đỗ");
+            }
         } else {
             console.log("trượt");
         }
