@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<pre>
+    onclick gọi đến 1 funtion trong js
+    => document.getElementById('result') lệnh này sẽ chọn 1 thẻ html có thuộc tính id
+    tương ứng
+    => .innerText = "" ( gán text cho thẻ được chọn )
+    => .style.XXX = "" ( gán phần hiển thị css cho thẻ được chọn )
+</pre>
+
+    <button onclick="showInfo('đỏ')">Màu đỏ</button>
+    <button onclick="showInfo('đen')">Màu đen</button>
+    <button onclick="showInfo('vàng')">Màu vàng</button>
+
+    <p id="result"></p>
+
+    <script type="text/javascript">
+        function showInfo(color) {
+            if (color === 'đỏ') {
+                document.getElementById('result').innerText = "Bạn chọn màu đỏ";
+                document.getElementById('result').style.color = "red";
+            } else if (color === 'đen') {
+                document.getElementById('result').innerText = "Bạn chọn màu đen";
+                document.getElementById('result').style.color = "black";
+            } else if (color === 'vàng') {
+                document.getElementById('result').innerText = "Bạn chọn màu vàng";
+                document.getElementById('result').style.color = "yellow";
+            } else {
+                // không làm gì
+            }
+        }
+    </script>
+</body>
+</html>
