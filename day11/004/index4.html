@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Khi tạo hàm có tham số thì lúc gọi hàm phải truyền tham số cho hàm đó
+        Để gán giá trị mặc định cho tham số khi khai báo hàm ta viết như sau :
+        function tênHàm(thamso1 = giá_trị_mặc_định, thamso2 = giá_trị_mặc_định) {
+            // Nội dung của hàm
+        }
+
+        Nếu khi gọi hàm không có giá trị truyền cho tham số . Hàm sẽ lấy giá trị mặc
+        định . Nếu có giá trị truyền cho tham số hàm sẽ nhận giá trị đó mà không lấy
+        giá trị mặc định nữa
+    </pre>
+
+    <script type="text/javascript">
+        function chuvihinhtron(thamsor = 24){
+            var chuvi = thamsor*2*3.14;
+            return chuvi;
+        }
+
+        function dientichhinhtron(thamsor = 24) {
+            var dientich = thamsor*thamsor*3.14;
+            return dientich;
+        }
+
+        var R = 15;
+        var C = chuvihinhtron();
+        var S = dientichhinhtron();
+        console.log("Chu vi :" + C);
+        console.log("Diện tích :" + S);
+    </script>
+</body>
+</html>

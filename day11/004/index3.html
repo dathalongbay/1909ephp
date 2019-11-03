@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Điều gì xảy ra nếu khai báo hàm có tham số
+        mà khi gọi hàm lại không truyền tham số cho hàm
+        => Chu vi :NaN
+        => Diện tích :NaN
+
+    </pre>
+
+    <script type="text/javascript">
+        function chuvihinhtron(thamsor){
+            var chuvi = thamsor*2*3.14;
+            return chuvi;
+        }
+
+        function dientichhinhtron(thamsor) {
+            var dientich = thamsor*thamsor*3.14;
+            return dientich;
+        }
+
+        var R = 15;
+        var C = chuvihinhtron();
+        var S = dientichhinhtron();
+        console.log("Chu vi :" + C);
+        console.log("Diện tích :" + S);
+    </script>
+</body>
+</html>
