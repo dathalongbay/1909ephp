@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
 <div class="container">
 
     <div class="row">
@@ -16,21 +15,20 @@
                 Đăng nhập lấy dữ liệu 2 ô input của form nếu login thành công
                 thì sẽ chuyển hướng trang đến https://www.w3schools.com
                 Nếu thất bại in ra câu thông báo thất bại trong thẻ div #message
-
-            </pre>
+        </pre>
     </div>
     <div class="row">
 
 
-        <form name="login" action="" method="post" onsubmit="login();">
+        <form name="login" action="" method="post" onsubmit="loginForm();return false;">
             <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="username" class="form-control" >
+                <input type="text" name="username" id="usernameIn" class="form-control" >
 
             </div>
             <div class="form-group">
                 <label>Mật khẩu</label>
-                <input type="password" name="password" class="form-control">
+                <input type="password" name="password" id="passwordIn" class="form-control">
             </div>
 
             <div id="message" class="form-group"></div>
@@ -41,8 +39,11 @@
         </form>
     </div>
 
+    <button id="a1" onclick="loginForm();">Test</button>
+
 
 </div>
+
 
 <script type="text/javascript">
 
@@ -61,10 +62,22 @@
         };
     }
 
-    function login() {
+    function loginForm() {
 
-        // viet chuc nang đang nhập
+        username = document.getElementById("usernameIn").value;
+        password = document.getElementById("passwordIn").value;
+        var user2 = new User(username, password);
 
+        if (user2.checkLogin()){
+            alert("thành công");
+            window.location = "https://www.w3schools.com";
+        } else {
+            alert("thất bại");
+            document.getElementById("message").innerText = "Sai thông tin";
+        }
+        console.log(user2);
+
+        return false;
     }
 </script>
 
