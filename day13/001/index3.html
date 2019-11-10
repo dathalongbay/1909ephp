@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="info"></div>
+    <div id="info2"></div>
+
+    <script type="text/javascript">
+
+        class SinhVien {
+
+            constructor(ten, tuoi, quequan, diemtoan, diemly, diemhoa) {
+                this.ten = ten;
+                this.tuoi = tuoi;
+                this.quequan = quequan;
+                this.diemtoan = diemtoan;
+                this.diemly = diemly;
+                this.diemhoa = diemhoa;
+            }
+
+            // khai báo các thuộc tính cho class này
+            thongtin() {
+                // trong class nếu muốn gọi đến thuộc tính hay phương thức
+                // ta dùng từ khoa this
+                return "Tôi tên là " + this.ten + " " + this.tuoi + " tuổi que quan tại "
+                    + this.quequan;
+            }
+
+            tinhdiem() {
+                this.diemtongket = (this.diemhoa + this.diemly + this.diemtoan)/3;
+            }
+
+            xeploai() {
+                if (this.diemtongket > 5) {
+                    this.xeploai = "qua môn";
+                } else {
+                    this.xeploai = "học lại";
+                }
+            }
+        }
+
+        var sinhvien1 = new SinhVien("nguyen van an", 21, "hà nội", 3,6,8);
+        document.getElementById("info").innerText = sinhvien1.thongtin();
+        sinhvien1.tinhdiem();
+        sinhvien1.xeploai();
+        document.getElementById("info2").innerText = "Xếp loại : " + sinhvien1.xeploai;
+    </script>
+</body>
+</html>
