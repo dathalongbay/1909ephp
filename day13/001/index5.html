@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Kế thừa trong class JS
+        để 1 class kế thừa từ 1 class ta dùng từ khóa extends
+        ví dụ : classA extends classB
+        Trong constructor của class con nếu muốn gọi đến constructor
+        của class cha ta dùng từ khóa super()
+        Bên trong class con bạn có thể gọi đến các thuộc tính và
+        phương thức của class cha bằng từ khóa this
+    </pre>
+
+    <div id="demo"></div>
+
+    <script type="text/javascript">
+        class Car {
+            constructor(brand) {
+                this.brand = brand;
+            }
+            hangxe() {
+                return 'Hãng xe ' + this.brand;
+            }
+        }
+
+        class Model extends Car {
+            constructor(brand, model) {
+
+                // gọi đến constructor của cha
+                super(brand);
+                this.model = model;
+            }
+            thongtin() {
+
+                // gọi đế method hangxe của class cha
+                return this.model + " thuộc " + this.hangxe();
+            }
+        }
+
+        var car1 = new Model("Ford", "Ecosport");
+        document.getElementById("demo").innerHTML = car1.thongtin();
+    </script>
+</body>
+</html>
