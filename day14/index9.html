@@ -5,12 +5,10 @@
     <title>Title</title>
 </head>
 <body>
+Username
+<input name="username" id="username" value="">
 
-<div id="demo">
-    <p>Demo h1</p>
-</div>
-
-<a href="#" id="btn">Click here</a>
+<a href="#" id="target">Click here</a>
 
 <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -20,11 +18,12 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        $("#btn").on("click", function (e) {
+        $("#target").on("click", function (e) {
             // ngăn sự chuyển hướng của thẻ a
             e.preventDefault();
 
-            var html = $("#demo").text("ABC");
+            var val = $("input#username").val("admin@gmail.com");
+
         });
 
 
