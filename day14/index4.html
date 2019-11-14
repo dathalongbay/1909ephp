@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="demo">
+    <p>Demo h1</p>
+</div>
+
+<a href="#" id="btn">Click here</a>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $("#btn").on("click", function (e) {
+            // ngăn sự chuyển hướng của thẻ a
+            e.preventDefault();
+
+            var html = $("#demo").html();
+
+            alert(html);
+
+
+
+        });
+
+
+    });
+</script>
+</body>
+</html>
