@@ -55,16 +55,24 @@
             $("#demo").css("color", "red");
 
             // viết câu lệnh js thuần chọn #demo1 có màu xanh
+            document.getElementById("demo1").style.color = "green";
 
             $(".hanoi").css("background", "yellow");
 
             // viết câu lệnh js thuần chọn .haiphong có màu nền xanh
 
+            var haiphong = document.getElementsByClassName("haiphong");
+            for (var i = 0; i < haiphong.length; i++) {
+                haiphong[i].style.backgroundColor = "green";
+            }
 
             $("h1").css("color", "violet");
 
             // viết câu lệnh js thuần chọn h3 có màu chữ tím
-
+            var h3 = document.getElementsByTagName("h3");
+            for (var i = 0; i < h3.length; i++) {
+                h3[i].style.backgroundColor = "green";
+            }
 
 
 
