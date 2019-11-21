@@ -32,7 +32,7 @@
 
     echo "<br>";
     var_dump($e);
-    
+
 
     // Mảng trong PHP
     // Object đối tượng trong php
