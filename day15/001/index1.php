@@ -22,3 +22,4 @@ echo 'Hello PHP trong nháy đơn';
 echo "<br>";
 echo "<h1>In ra thẻ h1 bằng lệnh PHP</h1>";
 echo 2000;
+
