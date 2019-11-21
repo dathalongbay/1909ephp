@@ -30,6 +30,28 @@
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+        /**
+         * 700.000.000 triệu mili giấy
+         * 1 s = 1000 mili giây
+         * 1 ngày = 24 * 60 * 60 * 1000 = 86.400.000 ms
+         * 1 giờ = 60 * 60 * 1000 = 3.600.000 ms
+         * 1 phút = 60 * 1000 = 60.000 ms
+         *
+         *
+         * ví dụ : 8 ngày 2 giờ 36 phút 1.5 giây
+         * 700.000.000 / (1000 * 60 * 60 * 24) = 700.000.000 / 86.400.000 = 8 ngày
+         * 8 ngày =
+         * 700.000.000 % (1000 * 60 * 60 * 24) => ( phần dư 0.101851851851852 ngày * 86400000) = 8.800.000 = số giờ
+         * 2 giờ
+         * 1.600.000 ms => phút và giây
+         * 26 phút
+         * 40 giây
+         *
+         * @type {string}
+         */
+
+
+
         // Display the result in the element with id="demo"
         document.getElementById("demo").innerHTML = "Còn " + days + " ngày " + hours + " giờ "
             + minutes + " phút " + seconds + " giây nữa là tết 2020";
