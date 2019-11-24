@@ -46,6 +46,11 @@
     echo "<br> empty() trả về true nếu mảng rỗng trả về false nếu mảng không rỗng ";
     var_dump($checkEmpty);
 
+    foreach ($mobiles as $key_mobiles => $value_mobile) {
+        echo "<br> Key : " . $key_mobiles;
+        echo "<br> Value : " . $value_mobile;
+    }
+
     ?>
 
 </body>

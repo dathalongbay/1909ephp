@@ -21,7 +21,10 @@
     echo "<br>" . $mobiles["sa"];
     echo "<br>" . $mobiles["op"];
 
-
+    foreach ($mobiles as $key_mobiles => $value_mobile) {
+        echo "<br> Key : " . $key_mobiles;
+        echo "<br> Value : " . $value_mobile;
+    }
     ?>
 
 </body>
