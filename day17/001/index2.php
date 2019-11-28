@@ -12,7 +12,7 @@
 <pre>
     Tạo 1 form đăng nhập trong chính file index2.php
     có username và mật khẩu
-    nếu username = admin và mật khẩu == 12345
+    nếu username == admin và mật khẩu == 12345
     thì hiển thị ra màn hình 3 dòng thông báo thành công bên dưới
     chú ý không được echo ra thẻ html để hiểu được cách nhúng thẻ html
     trong các cú pháp if else hay for loop trong PHP
