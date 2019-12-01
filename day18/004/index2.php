@@ -7,11 +7,13 @@
 <body>
     <pre>
        Xử lý file trong PHP
-        sử dụng hàm readfile()
+        sử dụng hàm fopen() fread() fclose
     </pre>
 
     <?php
-    echo readfile("demo.txt");
+    $myfile = fopen("demo.txt", "r") or die("Không thể mở file");
+    echo fread($myfile,filesize("demo.txt"));
+    fclose($myfile);
     ?>
 </body>
 </html>
