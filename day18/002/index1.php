@@ -37,7 +37,7 @@
     echo "</pre>";
 
     // in ra cookie truy cập vào 1 cookie
-    echo "<br> username : " . $_COOKIE["username"]; 
+    echo "<br> username : " . $_COOKIE["username"];
     ?>
 
 
