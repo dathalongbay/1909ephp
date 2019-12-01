@@ -8,6 +8,11 @@
     <pre>
        Xử lý file trong PHP
         sử dụng hàm fopen() fread() fclose
+
+        r	Open a file for read only. File pointer starts at the beginning of the file
+        r	Mở 1 file chỉ để đọc . Con trỏ bắt đầu từ đầu file
+        r+	Open a file for read/write. File pointer starts at the beginning of the file
+        r+	Mở 1 file để đọc và ghi . Con trỏ bắt đầu từ đầu file
     </pre>
 
     <?php
