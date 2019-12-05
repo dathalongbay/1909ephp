@@ -35,5 +35,23 @@ echo "<pre>";
 print_r($guest1);
 echo "</pre>";
 
+$mod1 = new Mod();
+$mod1->name = "mod 1";
+$mod1->viewArticle();
+echo "<pre>";
+print_r($mod1);
+echo "</pre>";
+
+$admin1 = new Admin();
+echo "<pre>";
+print_r($admin1);
+echo "</pre>";
+$admin1->viewArticle();
+
+/*
+ * Kết luận khi 1 class con kế thừa class
+ * thì class con có thể sử dụng tất cả thuộc tính và phương thức công khai ( public )
+ * của class cha
+ * */
 
 
