@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<pre>
+    6 điều cần ghi nhớ về namespace .
+    1 - khi mà sử dụng bất cứ class, function , biến , hằng số trong 1 file khác
+    ở trong file hiện tại thì phải nạp file đó và file hiện tại
+    thông qua 1 trong 4 lệnh ( include , include_once , require , require_once )
+    2 - 1 file php mà không có dòng khai báo namespace ở đầu file
+    thì có nghĩa là file đó đang thuộc global namespace ( namespace toàn cục )
+    4 file từ index1 đến index4 thuộc namespace toàn cục
+    3 - có 2 cách để khởi tạo 1 class thuộc namespace vào trong 1 hiện tại
+    cách 1 : new namespace_đầy_đủ của class đó
+    => $indexController = new \App\Controllers\Backend\IndexController();
+    demo trong file index4.php
+    cách 2 : nạp namespace kia vào trong file hiện tại thông qua từ khóa use
+    => use \App\Controllers\Backend\IndexController;
+    $indexController = new IndexController();
+    demo trong file index1.php
+    4 - bí danh của namespace
+    khi nạp 2 class trùng tên dù khác namespace thì phải sử dụng bí danh cho
+    các class đó ( demo trong file index2.php )
+    use \App\Controllers\Backend\IndexController as BE_IndexController;
+    use \App\Controllers\Frontend\IndexController as FE_IndexController;
+    và khi khởi tạo class thông qua bí danh ( alias )
+    thì $indexController1 = new BE_IndexController();
+    5 - nạp 1 namespace cụ thể ví dụ
+    namespace App\Controllers\Backend\IndexController;
+    vào trong namespace toàn cục
+    thêm \ vào trước namespace muốn nạp :
+    use \App\Controllers\Backend\IndexController;
+    6 - nạp namespace cụ thể vào trong 1 namespace cụ thể
+    ví dụ như :
+    namespace App\Controllers\Backend;
+    use App\Models\Backend\IndexModel;
+    thì sẽ không cần \ trước tên namepace App\Models\Backend\IndexModel;
+    như khi nạp vào trong namespace toàn cục
+
+
+</pre>
+</body>
+</html>
