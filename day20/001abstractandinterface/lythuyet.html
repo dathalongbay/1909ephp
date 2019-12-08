@@ -28,5 +28,42 @@
 
     </pre>
 
+
+    class SinhVienModel extends Model implements CRUD {
+
+        public $tenbang;
+
+        public function setTable($tableName) {
+            $this->tenbang = $tableName;
+        }
+
+        public function them() {
+            code thực thi cụ thể
+        }
+
+        public function sua() {
+            code thực thi cụ thể
+        }
+
+        public function capnhat() {
+            code thực thi cụ thể
+        }
+
+        public function xoa() {
+            code thực thi cụ thể
+        }
+    }
+
+    abstract class Model {
+        public abstract function setTable($tableName);
+    }
+
+    interface CRUD {
+        public function them();
+        public function sua();
+        public function xoa();
+        public function capnhat();
+    }
+
 </body>
 </html>
