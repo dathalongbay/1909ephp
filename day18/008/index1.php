@@ -10,7 +10,7 @@
         chứa thông tin về headers, đường dẫn và vị trí script
     </pre>
 
-    <?php 
+    <?php
     echo "<pre>";
     print_r($_SERVER);
     echo "</pre>";
