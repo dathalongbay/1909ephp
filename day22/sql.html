@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        - SELECT tên cột 1, tên cột 2 ... FROM tên bảng
+        lấy dữ liệu theo cột
+        ví dụ : SELECT id, title FROM k6ltb_content
+        - SELECT * FROM tên bảng
+        lấy dữ liệu tất cả các cột
+        ví dụ : SELECT * FROM k6ltb_content
+        - INSERT INTO tên bảng ( tên cột 1, tên cột 2, ... )
+        VALUES ( giá trị cột 1, giá trị cột 2 ... )
+        thêm 1 bản ghi mới vào bảng
+        ví dụ : INSERT INTO k6ltb_content (asset_id,title,alias)
+        VALUES (0,"demo","demo-alias")
+        - UPDATE tên bảng SET tên cột 1 = giá trị 1,tên cột 2 = giá trị 2 ...
+        WHERE cột 1 = giá trị 1
+        cập nhật dữ liệu
+        ví dụ : UPDATE k6ltb_content SET asset_id=5,title="cập nhật",
+        alias="cập nhật alias" WHERE id = 7
+        - DELETE FROM tên bảng WHERE điều kiện
+        xóa dữ liệu
+        ví dụ : DELETE FROM k6ltb_content WHERE id = 7
+        - Chú ý : khóa chính của bảng ví dụ cột id
+        thì luôn là 1 số và tự động tăng dần không bị trùng lặp giữa các
+        bản ghi nên khi insert không cần insert khóa chính của bảng
+    </pre>
+
+</body>
+</html>
