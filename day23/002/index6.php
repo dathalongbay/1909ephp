@@ -44,6 +44,7 @@
                         <th scope="col">Lastname</th>
                         <th scope="col">Email</th>
                         <th scope="col">Thời gian</th>
+                        <th scope="col">Hành động</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -57,6 +58,10 @@
                             <td><?php echo $v["lastname"] ?></td>
                             <td><?php echo $v["email"] ?></td>
                             <td><?php echo $v["reg_date"] ?></td>
+                            <td>
+                                <a href="edit.php?id=<?php echo $v["id"] ?>" class="btn btn-warning">Sửa</a>
+                                <a href="delete.php?id=<?php echo $v["id"] ?>" class="btn btn-danger">Xóa</a>
+                            </td>
                         </tr>
                     <?php } ?>
 
