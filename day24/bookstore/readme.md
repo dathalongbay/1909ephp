@@ -1,17 +1,17 @@
 tóm tắt dự án
-- tên project bookstore ( bán sách )
-- tên cơ sở dữ liệu : bookstore
+# tên project bookstore ( bán sách )
+## tên cơ sở dữ liệu : bookstore
 
-các bảng trong cơ sở dữ liệu
-- bảng users ( để quản lý admins )
-gồm các trường dữ liệu sau :
-id ( khóa chính ) auto_increment int
-username ( tên đăng nhập ) varchar
-avatar ( ảnh đại diện ) varchar
-useremail ( email ) varchar
-password ( mật khẩu ) varchar
-created ( thời gian tạo ) TIMESTAMP
-updated ( thời gian sửa lần gần nhất ) TIMESTAMP
+# các bảng trong cơ sở dữ liệu
+### bảng users ( để quản lý admins )
+# gồm các trường dữ liệu sau :
+### id ( khóa chính ) auto_increment int
+### username ( tên đăng nhập ) varchar
+### avatar ( ảnh đại diện ) varchar
+### useremail ( email ) varchar
+### password ( mật khẩu ) varchar
+### created ( thời gian tạo ) TIMESTAMP
+### updated ( thời gian sửa lần gần nhất ) TIMESTAMP
 
 - bảng books ( bảng chứa sách )
 id ( khóa chính ) int 
