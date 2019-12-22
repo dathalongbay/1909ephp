@@ -41,4 +41,5 @@ total_price ( tổng tiền )  int
 book_id ( id của cuốn sách người dùng mua ) int
 created ( thời gian đặt hàng ) TIMESTAMP
 status ( trạng thái đơn hàng ) int 
+-- 
 
