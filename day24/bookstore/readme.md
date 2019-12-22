@@ -13,7 +13,7 @@
 ### created ( thời gian tạo ) TIMESTAMP
 ### updated ( thời gian sửa lần gần nhất ) TIMESTAMP
 
-### bảng books ( bảng chứa sách )
+# bảng books ( bảng chứa sách )
 ### id ( khóa chính ) int 
 ### book_name ( tên sách ) varchar
 ### book_intro ( giới thiệu ngắn ) varchar
