@@ -1,8 +1,9 @@
 tóm tắt dự án
 - tên project bookstore ( bán sách )
 - tên cơ sở dữ liệu : bookstore
+
 các bảng trong cơ sở dữ liệu
-bảng users ( để quản lý admins )
+- bảng users ( để quản lý admins )
 gồm các trường dữ liệu sau :
 id ( khóa chính ) auto_increment int
 username ( tên đăng nhập ) varchar
@@ -12,7 +13,7 @@ password ( mật khẩu ) varchar
 created ( thời gian tạo ) TIMESTAMP
 updated ( thời gian sửa lần gần nhất ) TIMESTAMP
 
-bảng books ( bảng chứa sách )
+- bảng books ( bảng chứa sách )
 id ( khóa chính ) int 
 book_name ( tên sách ) varchar
 book_intro ( giới thiệu ngắn ) varchar
@@ -29,7 +30,7 @@ book_buy ( số lượt bán thành công ) int
 book_status ( trạng thái cuốn sách ) int
 book_desc ( mô tả ) text
 
-bảng buyer ( đơn hàng mua sách )
+- bảng buyer ( đơn hàng mua sách )
 id ( khóa chính ) int
 buy_name ( tên người mua) varchar
 buy_email ( email người mua ) varchar
@@ -41,5 +42,5 @@ total_price ( tổng tiền )  int
 book_id ( id của cuốn sách người dùng mua ) int
 created ( thời gian đặt hàng ) TIMESTAMP
 status ( trạng thái đơn hàng ) int 
--- 
+
 
