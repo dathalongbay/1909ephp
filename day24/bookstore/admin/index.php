@@ -12,5 +12,26 @@
 </head>
 <body>
 
+    <div class="container">
+        <h1>Bảng điều khiển admin</h1>
+        <p><a href="" class="btn btn-success">Xem thông tin</a></p>
+        <p><a href="" class="btn btn-warning">Đăng xuất</a></p>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Số lượng admin (43)</h3>
+                <p><a href="" class="btn btn-info">Thống kê</a></p>
+            </div>
+
+            <div class="col-sm-4">
+                <h3>Số lượng sách (143)</h3>
+                <p><a href="" class="btn btn-info">Thống kê</a></p>
+            </div>
+
+            <div class="col-sm-4">
+                <h3>Số lượng đơn hàng (1143)</h3>
+                <p><a href="" class="btn btn-info">Thống kê</a></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
