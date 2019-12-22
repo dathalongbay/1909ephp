@@ -16,7 +16,8 @@
     <h1>Tạo mới sách</h1>
     <div class="row">
         <div class="col-md-12">
-            <form>
+            <form name="submitbook" method="post" action="actionbook.php">
+                <input type="hidden" name="action" value="submit">
                 <div class="form-group">
                     <label>tên sách</label>
                     <input type="text" class="form-control" name="book_name" value="">

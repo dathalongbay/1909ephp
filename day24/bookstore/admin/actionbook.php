@@ -1,16 +1,32 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<?php
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+if (isset($_POST["action"])) {
+    if ($_POST["action"] == "edit") {
+        // code edit
+    } elseif ($_POST["action"] == "delete") {
+        // code delete
+    } else {
+        // code thêm mới
 
-</head>
-<body>
+        /**
+         * định nghĩa các trường dữ liệu hợp lệ bên trong bảng books
+         */
+        $bookFields = ["book_name", "book_intro", "book_thumbnail",
+            "book_images", "book_price", "book_sell", "book_author", "book_publisher",
+            "created" , "updated", "book_hit", "book_buy", "book_status", "book_desc"];
 
-</body>
-</html>
+        $data = [];
+        foreach($bookFields as $fieldName) {
+            if (isset($_POST[$fieldName])) {
+                $data[$fieldName] = $_POST[$fieldName];
+            }
+        }
+
+        echo "<pre>";
+        print_r($data);
+        echo "</pre>"; die;
+    }
+}
+
+?>
+

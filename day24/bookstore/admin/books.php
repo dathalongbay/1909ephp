@@ -12,5 +12,47 @@
 </head>
 <body>
 
+<div class="container">
+    <h1>Quản lý khách hàng</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Firstname</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Thời gian</th>
+                    <th scope="col">Hành động</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <?php
+                foreach($all as $k=>$v) { ?>
+
+                    <tr>
+                        <th scope="row"><?php echo $v["id"] ?></th>
+                        <td><?php echo $v["firstname"] ?></td>
+                        <td><?php echo $v["lastname"] ?></td>
+                        <td><?php echo $v["email"] ?></td>
+                        <td><?php echo $v["reg_date"] ?></td>
+                        <td>
+                            <a href="edit.php?id=<?php echo $v["id"] ?>" class="btn btn-warning">Sửa</a>
+                            <a href="delete.php?id=<?php echo $v["id"] ?>" class="btn btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                <?php } ?>
+
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
