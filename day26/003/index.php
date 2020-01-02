@@ -29,7 +29,7 @@ echo "</pre>";
 <div class="container">
     <h2>Basic AJAX</h2>
 
-    <table class="table">
+    <table id="ajaxtable" class="table">
         <thead>
         <tr>
             <th>ID</th>
@@ -54,6 +54,90 @@ echo "</pre>";
     <button id="loadmore" class="btn btn-success">Xem thêm</button>
 </div>
 
+
+<script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        $("#loadmore").on("click", function(){
+
+
+           /* LIMIT 0,20
+            LIMIT 20,20
+            LIMIT 40,20
+            LIMIT 60,20
+            LIMIT 80,20
+            LIMIT 100,20*/
+
+           var start = $("#ajaxtable tbody > tr").length;
+
+           var dataPost = {};
+           dataPost.start = start;
+           dataPost.limit = 20;
+
+           $.ajax({
+               // đích gửi dữ liệu
+               url: "loadmore.php",
+               // dữ liệu gửi đi
+               data: dataPost,
+               // cách gửi dữ liệu
+               type: "POST",
+               // kiểu data trả về
+               dataType: "json",
+               beforeSend: function() {
+                   alert("trước khi gửi đi");
+               },
+               success: function(res) {
+                   console.log(res);
+
+                   if (parseInt(res.length) > 0) {
+                       var html = "";
+
+                       for (i = 0; i < res.length; i++) {
+                           console.log(res[i]);
+                           html += '<tr>' +
+                               '<td>'+res[i].id+'</td>' +
+                               '<td>'+res[i].title+'</td>' +
+                               '<td>'+res[i].intro+'</td>' +
+                               '</tr>';
+                       }
+
+                       console.log(html);
+
+                       $("#ajaxtable tbody").append(html);
+                   } else {
+                       alert("Hết dữ liệu trong db");
+                       $("#loadmore").hide();
+                   }
+
+                   
+               },
+               error : function() {
+                   alert("Có lỗi xảy ra");
+               },
+               complete: function () {
+                   alert("hoàn thành quá trình chay ajax");
+               }
+
+           });
+
+
+
+
+
+
+
+
+        });
+
+    });
+
+</script>
 
 
 
