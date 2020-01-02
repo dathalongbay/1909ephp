@@ -33,7 +33,10 @@ if (isset($_POST["action"])) {
                     } else {
                         $data[$fieldName] = date("Y-m-d H:i:s");
                     }
-
+                } elseif (!in_array($fieldName, $bookFieldsNotQuote)) {
+                    $data[$fieldName] = "";
+                } else {
+                    $data[$fieldName] = 0;
                 }
             }
 
