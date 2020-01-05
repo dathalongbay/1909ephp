@@ -1,6 +1,6 @@
 <?php
 namespace MVC\Controllers;
 
-class PostController {
+class ProductController {
 
 }
