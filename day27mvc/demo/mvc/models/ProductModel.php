@@ -1,6 +1,6 @@
 <?php
 namespace MVC\Models;
 
-class ProductModel {
+class ProductModel extends Database {
 
 }
