@@ -1,7 +1,3 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 1/5/2020
- * Time: 6:39 PM
- */
+// __FILE__ in ra tên file đang được gọi
+echo "<br>" . __FILE__;
