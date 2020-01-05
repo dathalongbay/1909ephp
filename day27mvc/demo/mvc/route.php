@@ -12,7 +12,6 @@ class Route {
 
         // ucfirst viết hoa chữ cái đầu
         $controller = ucfirst($controller);
-        $action = ucfirst($action);
 
         if ($controller == "Post") {
             $controllerObject = new \MVC\Controllers\PostController();
