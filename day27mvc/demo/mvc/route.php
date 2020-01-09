@@ -12,8 +12,13 @@ class Route {
 
         // ucfirst viết hoa chữ cái đầu
         $controller = ucfirst($controller);
+        $controllerClassName = "\\MVC\\Controllers\\".$controller."Controller";
+        $actionMethodName = $action."Action";
 
-        if ($controller == "Post") {
+        $controllerObject = new $controllerClassName();
+        $controllerObject->$actionMethodName();
+
+       /* if ($controller == "Post") {
             $controllerObject = new \MVC\Controllers\PostController();
 
             if ($action == "index") {
@@ -37,7 +42,7 @@ class Route {
             } elseif ($action == "delete") {
                 $controllerObject->deleteAction();
             }
-        }
+        }*/
 
 
     }
