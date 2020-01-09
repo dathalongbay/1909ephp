@@ -15,8 +15,24 @@ class Route {
         $controllerClassName = "\\MVC\\Controllers\\".$controller."Controller";
         $actionMethodName = $action."Action";
 
-        $controllerObject = new $controllerClassName();
-        $controllerObject->$actionMethodName();
+        if (class_exists($controllerClassName)) {
+            $controllerObject = new $controllerClassName();
+
+            if(method_exists($controllerObject,$actionMethodName )) {
+                $controllerObject->$actionMethodName();
+            } else {
+                $controllerClassName = "\\MVC\\Controllers\\ErrorController";
+                $controllerObject = new $controllerClassName();
+                $controllerObject->redirect404();
+            }
+
+        } else {
+            $controllerClassName = "\\MVC\\Controllers\\ErrorController";
+            $controllerObject = new $controllerClassName();
+            $controllerObject->redirect404();
+        }
+
+
 
        /* if ($controller == "Post") {
             $controllerObject = new \MVC\Controllers\PostController();
