@@ -7,8 +7,8 @@ class Route {
     public function run() {
 
         // $_REQUEST = $_POST + $_GET
-        $controller = $_REQUEST["controller"];
-        $action = $_REQUEST["action"];
+        $controller = (isset($_REQUEST["controller"]) && $_REQUEST["controller"]) ? $_REQUEST["controller"] : "index";
+        $action = (isset($_REQUEST["action"]) && $_REQUEST["action"]) ? $_REQUEST["action"] : "index";
 
         // ucfirst viết hoa chữ cái đầu
         $controller = ucfirst($controller);
