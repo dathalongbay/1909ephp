@@ -44,6 +44,62 @@
 
         7 đưa migration thành bảng thật trong db
         => php artisan migrate
+
+        8 Seeding
+        tạo seeder : php artisan make:seeder CustomersTableSeeder
+
+        use Illuminate\Database\Seeder;
+
+        class DatabaseSeeder extends Seeder
+        {
+            /**
+             * Seed the application's database.
+             *
+             * @return void
+             */
+            public function run()
+            {
+                // $this->call(UsersTableSeeder::class);
+
+                $this->call(CustomersTableSeeder::class);
+            }
+        }
+
+        =>
+
+        use Illuminate\Database\Seeder;
+        use Illuminate\Support\Facades\DB;
+        use Illuminate\Support\Facades\Hash;
+        use Illuminate\Support\Str;
+
+        class CustomersTableSeeder extends Seeder
+        {
+            /**
+             * Run the database seeds.
+             *
+             * @return void
+             */
+            public function run()
+            {
+                //
+                for ($i = 1; $i <= 20; $i++) {
+                    DB::table('customers')->insert([
+                        'firstname' => Str::random(10),
+                        'lastname' => Str::random(10),
+                        'age' => rand(1,100),
+                        'address' => Str::random(10) . " " . Str::random(10),
+                        'birthday' => date("Y-m-d H:i:s"),
+                    ]);
+                }
+
+            }
+        }
+
+        =>
+        Bước 1 : composer dump-autoload
+        Bước 2 : php artisan db:seed
+
+
     </pre>
 
 </body>
