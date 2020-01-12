@@ -26,7 +26,21 @@
         => php artisan make:model Models/Backend/PostModel
         => php artisan make:model Models/Frontend/PostModel
 
+        6 migration
+        => php artisan make:migration create_customers_table
 
+          public function up()
+            {
+                Schema::create('customers', function (Blueprint $table) {
+                    $table->bigIncrements('id');
+                    $table->string('firstname');
+                    $table->string('lastname');
+                    $table->integer("age");
+                    $table->text("address");
+                    $table->dateTime("birthday");
+                    $table->timestamps();
+                });
+            }
     </pre>
 
 </body>
