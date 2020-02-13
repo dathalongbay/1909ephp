@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>@yield('title')</title>
 
     <style type="text/css">
         * {
@@ -49,10 +49,10 @@
 </head>
 <body>
 
-@include("partials.header");
+@include("demo5.partials.header")
 
 
-@include("partials.navigation");
+@include("demo5.partials.navigation")
 
 
 <main>
@@ -60,10 +60,10 @@
         <h1>Khai báo vị trí để load sub view</h1>
         @yield("content")
     </section>
-    @include("partials.sidebar");
+    @include("demo5.partials.sidebar")
 </main>
 
-@include("partials.footer");
+@include("demo5.partials.footer")
 
 </body>
 </html>
