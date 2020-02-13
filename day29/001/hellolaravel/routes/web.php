@@ -40,5 +40,7 @@ Route::get('/demo3', 'Demo3Controller@index');
 
 
 Route::get('/demo5', 'Demo5Controller@homepage');
+Route::get('/demo5/intro', 'Demo5Controller@intro');
+Route::get('/demo5/contact', 'Demo5Controller@contact');
 
 
