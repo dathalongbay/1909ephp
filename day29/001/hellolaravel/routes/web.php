@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * echo ra 1 câu thông báo đơn giản
+ */
+Route::get('/demo1', function () {
+    echo "route demo1 laravel";
+});
+
+Route::get('/demo2', function () {
+    // trả về view hiển thi
+    return view('demo2');
+});
+
+
