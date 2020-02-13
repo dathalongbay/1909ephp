@@ -18,5 +18,14 @@
     <h1>Cú pháp của laravel in ra 1 biến</h1>
     <div>{{ $name2 }}</div>
 
+    <?php
+    echo "<pre>";
+    print_r($students);
+    echo "</pre>";
+
+    echo "<br>" . $welcome;
+
+    ?>
+
 </body>
 </html>
