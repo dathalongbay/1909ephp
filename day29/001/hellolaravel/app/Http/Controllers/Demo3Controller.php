@@ -46,4 +46,9 @@ class Demo3Controller extends Controller
     }
 
 
+    public function index2() {
+        return view("demo5.subviews.homepage");
+    }
+
+
 }
