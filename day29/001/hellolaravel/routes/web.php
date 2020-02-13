@@ -22,9 +22,20 @@ Route::get('/demo1', function () {
     echo "route demo1 laravel";
 });
 
+/**
+ * trả về view
+ */
 Route::get('/demo2', function () {
     // trả về view hiển thi
     return view('demo2');
 });
+
+/**
+ * Route dẫn vào trong controller
+ * Demo3Controller@index =>
+ * gọi vào trong Demo3Controller
+ * và vào trong method index của Demo3Controller
+ */
+Route::get('/demo3', 'Demo3Controller@index');
 
 
