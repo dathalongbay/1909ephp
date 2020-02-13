@@ -39,3 +39,6 @@ Route::get('/demo2', function () {
 Route::get('/demo3', 'Demo3Controller@index');
 
 
+Route::get('/demo5', 'Demo5Controller@homepage');
+
+
