@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * 4 route method get của phần hiển thị
+ */
+Route::get('/backend/index', "Backend\BooksController@index");
+Route::get('/backend/create', "Backend\BooksController@create");
+Route::get('/backend/edit', "Backend\BooksController@edit");
+Route::get('/backend/delete', "Backend\BooksController@delete");

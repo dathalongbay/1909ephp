@@ -18,5 +18,12 @@ bookstore/database/migrations/create_books_table.php
 6 - tạo bảng thật
 php artisan migrate
 7 - dựng giao diện template html bootstrap
+8 - tạo router cho ứng dụng
+9 - tạo code trong controller để trả về view tương ứng
+10 - sửa model để lấy dữ liệu
+11 - kéo model vào trong controller
+12 - trả dữ liệu từ controller xuống view
+13 - in dữ liệu xuống view
+14 - test thử ứng dụng
 
 
