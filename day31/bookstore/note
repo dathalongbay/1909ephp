@@ -10,4 +10,11 @@ php artisan make:controller Frontend/BooksController
 4 - tạo model
 php artisan make:model Models/Backend/BooksModel
 php artisan make:model Models/Frontend/BooksModel
+5 - tạo các migration cơ sở dữ liệu
+php artisan make:migration create_books_table
+vào trong đường dẫn
+bookstore/database/migrations/create_books_table.php
+để xem cấu trúc bảng
+6 - tạo bảng thật
+php artisan migrate
 
