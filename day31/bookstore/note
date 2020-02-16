@@ -1,0 +1,13 @@
+1 - tạo folder tên là bookstore sau đó cài bản laravel mới vào trong
+folder này
+composer global require laravel/installer
+laravel new
+2 - tạo db : bookstore
+3 - tạo ra 1 số controller cơ bản
+3.1 :
+php artisan make:controller Backend/BooksController
+php artisan make:controller Frontend/BooksController
+4 - tạo model
+php artisan make:model Models/Backend/BooksModel
+php artisan make:model Models/Frontend/BooksModel
+
