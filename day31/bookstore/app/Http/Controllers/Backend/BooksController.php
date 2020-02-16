@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\BooksModel;
 use Illuminate\Http\Request;
 
 class BooksController extends Controller
@@ -12,9 +13,25 @@ class BooksController extends Controller
     public function index() {
 
         /**
-         * trả về view
+         * Nạp model vào trong controller
+         * lấy ra tất cả các bản ghi ::all;
          */
-        return view("bookstore.backend.subviews.index");
+        $books1 = BooksModel::all();
+
+        echo "<pre>";
+        print_r($books1);
+        echo "</pre>";
+
+        $data = [];
+
+        // key của mảng truyền xuống view chính là tên biến cửa view
+        $data["books"] = $books1;
+
+        /**
+         * trả về view
+         * $data là mảng dữ liệu truyền xuống view
+         */
+        return view("bookstore.backend.subviews.index", $data);
     }
 
 

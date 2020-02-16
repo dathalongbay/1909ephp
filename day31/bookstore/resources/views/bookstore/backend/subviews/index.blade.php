@@ -20,24 +20,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
-                        <a href="edit.html" class="btn btn-warning">Sửa</a>
-                        <a href="delete.html" class="btn btn-danger">Xóa</a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>
-                        <a href="edit.html" class="btn btn-warning">Sửa</a>
-                        <a href="delete.html" class="btn btn-danger">Xóa</a>
-                    </td>
-                </tr>
+                    @foreach($books as $book)
+                    <tr>
+                        <th scope="row">{{ $book->id }}</th>
+                        <td>{{ $book->book_name }}</td>
+                        <td>{{ $book->book_price_sell }}</td>
+                        <td>
+                            <a href="edit.html" class="btn btn-warning">Sửa</a>
+                            <a href="delete.html" class="btn btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                    @endforeach
+
                 </tbody>
             </table>
         </div>
