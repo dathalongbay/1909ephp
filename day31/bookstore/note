@@ -17,4 +17,6 @@ bookstore/database/migrations/create_books_table.php
 để xem cấu trúc bảng
 6 - tạo bảng thật
 php artisan migrate
+7 - dựng giao diện template html bootstrap
+
 
