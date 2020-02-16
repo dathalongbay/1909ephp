@@ -62,6 +62,9 @@ class BooksController extends Controller
      */
     public function store() {
 
+        echo "<pre>";
+        print_r($_POST);
+        echo "</pre>";
     }
 
     /**
