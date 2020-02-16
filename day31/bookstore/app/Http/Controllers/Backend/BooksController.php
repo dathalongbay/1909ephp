@@ -55,4 +55,26 @@ class BooksController extends Controller
          */
         return view("bookstore.backend.subviews.delete");
     }
+
+
+    /**
+     *lưu dữ liệu khi tạo mới
+     */
+    public function store() {
+
+    }
+
+    /**
+     *lưu dữ liệu khi cập nhật
+     */
+    public function update() {
+
+    }
+
+    /**
+     * xóa dữ liệu trong db
+     */
+    public function destroy() {
+
+    }
 }

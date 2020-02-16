@@ -20,5 +20,22 @@ Route::get('/', function () {
  */
 Route::get('/backend/index', "Backend\BooksController@index");
 Route::get('/backend/create', "Backend\BooksController@create");
-Route::get('/backend/edit', "Backend\BooksController@edit");
-Route::get('/backend/delete', "Backend\BooksController@delete");
+// {id} là biến url ví dụ /backend/edit/5
+Route::get('/backend/edit/{id}', "Backend\BooksController@edit");
+Route::get('/backend/delete/{id}', "Backend\BooksController@delete");
+
+
+/**
+ * 3 router xử lý dữ liệu
+ */
+
+// lưu dữ liệu tạo mới
+Route::post("/backend/create", "Backend\BooksController@store");
+
+// lưu dữ liệu khi cập nhật
+// {id} biến trong url => /backend/edit/3
+Route::post("/backend/edit/{id}", "Backend\BooksController@update");
+
+// xóa dữ liệu thật
+// {id} biến trong url => /backend/delete/3
+Route::post("/backend/delete/{id}", "Backend\BooksController@destroy");

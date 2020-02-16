@@ -6,7 +6,7 @@
     <div class="row">
         <h1>Quản lý sách</h1>
         <div class="col-md-12">
-            <a href="create.html" class="btn btn-info">Thêm sách</a>
+            <a href="{{ url("/backend/create") }}" class="btn btn-info">Thêm sách</a>
         </div>
         <div class="col-md-12">
 

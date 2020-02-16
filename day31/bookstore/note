@@ -26,4 +26,7 @@ php artisan migrate
 13 - in dữ liệu xuống view
 14 - test thử ứng dụng
 
+*** câu lệnh hiển thị tất cả router trong ứng dụng
+php artisan route:list
+
 
