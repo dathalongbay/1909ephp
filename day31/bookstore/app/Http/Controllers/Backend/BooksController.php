@@ -42,11 +42,21 @@ class BooksController extends Controller
         return view("bookstore.backend.subviews.create");
     }
 
-    public function edit() {
+    public function edit($id) {
+
+        var_dump($id);
+
         /**
          * trả về view
          */
-        return view("bookstore.backend.subviews.edit");
+        $book = BooksModel::find($id);
+
+        $data = [];
+
+        // key của mảng truyền xuống view chính là tên biến cửa view
+        $data["book"] = $book;
+
+        return view("bookstore.backend.subviews.edit", $data);
     }
 
     public function delete() {

@@ -31,8 +31,8 @@
                         <td>{{ $book->book_name }}</td>
                         <td>{{ $book->book_price_sell }}</td>
                         <td>
-                            <a href="edit.html" class="btn btn-warning">Sửa</a>
-                            <a href="delete.html" class="btn btn-danger">Xóa</a>
+                            <a href="{{ url("/backend/edit/$book->id") }}" class="btn btn-warning">Sửa</a>
+                            <a href="{{ url("/backend/delete/$book->id") }}" class="btn btn-danger">Xóa</a>
                         </td>
                     </tr>
                     @endforeach

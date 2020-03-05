@@ -13,11 +13,11 @@
             <form name="book" action="" method="post">
                 <div class="form-group">
                     <label>book_name</label>
-                    <input type="text" name="book_name" class="form-control" value="">
+                    <input type="text" name="book_name" class="form-control" value="{{ $book->book_name }}">
                 </div>
                 <div class="form-group">
                     <label>book_slug</label>
-                    <input type="text" name="book_slug" class="form-control" value="">
+                    <input type="text" name="book_slug" class="form-control" value="{{ $book->book_slug }}">
                 </div>
                 <div class="form-group">
                     <label>book_intro</label>
