@@ -100,8 +100,23 @@ class BooksController extends Controller
     /**
      *lưu dữ liệu khi cập nhật
      */
-    public function update() {
+    public function update(Request $request, $id) {
 
+        $book = BooksModel::find($id);
+
+        $book->book_name = $request->book_name;
+        $book->book_slug = $request->book_slug;
+        $book->book_intro = $request->book_intro;
+        $book->book_desc = $request->book_desc;
+        $book->book_main_image = $request->book_main_image;
+        $book->book_images = $request->book_images;
+        $book->book_author = $request->book_author;
+        $book->book_price_core = $request->book_price_core;
+        $book->book_price_sell = $request->book_price_sell;
+        $book->book_status = $request->book_status;
+        $book->save();
+
+        return redirect('backend/index')->with('status', 'Cập nhật cuốn sách thành công!');
     }
 
     /**

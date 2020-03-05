@@ -10,7 +10,10 @@
         <div class="col-md-12">
 
 
-            <form name="book" action="" method="post">
+            <form name="book" action="{{ url("/backend/edit/$book->id") }}" method="post">
+
+                {{ csrf_field() }}
+
                 <div class="form-group">
                     <label>book_name</label>
                     <input type="text" name="book_name" class="form-control" value="{{ $book->book_name }}">
