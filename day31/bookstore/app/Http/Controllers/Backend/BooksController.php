@@ -60,11 +60,31 @@ class BooksController extends Controller
     /**
      *lưu dữ liệu khi tạo mới
      */
-    public function store() {
+    public function store(Request $request) {
 
         echo "<pre>";
         print_r($_POST);
         echo "</pre>";
+
+        /*
+         * $request là object của class Request
+         * được sử dụng để lấy dữ liệu từ form post hoặc từ trên url của trình duyệt
+         */
+
+        $book = new BooksModel();
+        $book->book_name = $request->book_name;
+        $book->book_slug = $request->book_slug;
+        $book->book_intro = $request->book_intro;
+        $book->book_desc = $request->book_desc;
+        $book->book_main_image = $request->book_main_image;
+        $book->book_images = $request->book_images;
+        $book->book_author = $request->book_author;
+        $book->book_price_core = $request->book_price_core;
+        $book->book_price_sell = $request->book_price_sell;
+        $book->book_status = $request->book_status;
+        $book->save();
+
+        return redirect('backend/index')->with('status', 'Đã thêm cuốn sách thành công!');
     }
 
     /**

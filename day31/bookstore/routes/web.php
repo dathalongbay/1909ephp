@@ -18,8 +18,8 @@ Route::get('/', function () {
 /**
  * 4 route method get của phần hiển thị
  */
-Route::get('/backend/index', "Backend\BooksController@index");
-Route::get('/backend/create', "Backend\BooksController@create");
+Route::get('/backend/index', "Backend\BooksController@index")->name("book_index");
+Route::get('/backend/create', "Backend\BooksController@create")->name("book_create");
 // {id} là biến url ví dụ /backend/edit/5
 Route::get('/backend/edit/{id}', "Backend\BooksController@edit");
 Route::get('/backend/delete/{id}', "Backend\BooksController@delete");

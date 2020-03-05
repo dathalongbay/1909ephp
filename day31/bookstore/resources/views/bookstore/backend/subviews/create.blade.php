@@ -11,7 +11,6 @@
     </div>
     <div class="col-md-12">
 
-
         <form name="book" action="{{ url("/backend/create") }}" method="post">
 
             {{ csrf_field() }}

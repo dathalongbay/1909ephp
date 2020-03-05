@@ -5,6 +5,11 @@
 @section("content")
     <div class="row">
         <h1>Quản lý sách</h1>
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
         <div class="col-md-12">
             <a href="{{ url("/backend/create") }}" class="btn btn-info">Thêm sách</a>
         </div>
