@@ -18,9 +18,7 @@ class BooksController extends Controller
          */
         $books1 = BooksModel::all();
 
-        echo "<pre>";
-        print_r($books1);
-        echo "</pre>";
+
 
         $data = [];
 

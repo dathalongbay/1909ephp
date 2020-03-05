@@ -24,37 +24,38 @@
                 </div>
                 <div class="form-group">
                     <label>book_intro</label>
-                    <textarea class="form-control" name="book_intro"></textarea>
+                    <textarea class="form-control" name="book_intro">{{ $book->book_intro }}</textarea>
                 </div>
                 <div class="form-group">
                     <label>book_desc</label>
-                    <textarea class="form-control" name="book_desc"></textarea>
+                    <textarea class="form-control" name="book_desc">{{ $book->book_desc }}</textarea>
                 </div>
                 <div class="form-group">
                     <label>book_main_image</label>
-                    <input type="text" name="book_main_image" class="form-control" value="">
+                    <input type="text" name="book_main_image" class="form-control" value="{{ $book->book_main_image }}">
                 </div>
                 <div class="form-group">
                     <label>book_images</label>
-                    <input type="text" name="book_images" class="form-control" value="">
+                    <input type="text" name="book_images" class="form-control" value="{{ $book->book_images }}">
                 </div>
                 <div class="form-group">
                     <label>book_author</label>
-                    <input type="text" name="book_author" class="form-control" value="">
+                    <input type="text" name="book_author" class="form-control" value="{{ $book->book_author }}">
                 </div>
                 <div class="form-group">
                     <label>book_price_core</label>
-                    <input type="text" name="book_price_core" class="form-control" value="">
+                    <input type="text" name="book_price_core" class="form-control" value="{{ $book->book_price_core }}">
                 </div>
                 <div class="form-group">
                     <label>book_price_sell</label>
-                    <input type="text" name="book_price_sell" class="form-control" value="">
+                    <input type="text" name="book_price_sell" class="form-control" value="{{ $book->book_price_sell }}">
                 </div>
                 <div class="form-group">
                     <label>book_status</label>
                     <select name="book_status">
-                        <option value="1">Xuất bản</option>
-                        <option value="2">Không xuất bản</option>
+                        <option value="1" {{ ($book->book_status == 1) ? "selected" : ""  }}>Xuất bản</option>
+                        <option value="2" {{ ($book->book_status == 2) ? "selected" : ""  }}>Không xuất bản</option>
+
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Sửa sách</button>
