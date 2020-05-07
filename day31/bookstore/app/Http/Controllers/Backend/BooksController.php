@@ -57,11 +57,22 @@ class BooksController extends Controller
         return view("bookstore.backend.subviews.edit", $data);
     }
 
-    public function delete() {
+    public function delete($id) {
         /**
          * trả về view
          */
-        return view("bookstore.backend.subviews.delete");
+
+        /**
+         * trả về view
+         */
+        $book = BooksModel::find($id);
+
+        $data = [];
+
+        // key của mảng truyền xuống view chính là tên biến cửa view
+        $data["book"] = $book;
+
+        return view("bookstore.backend.subviews.delete", $data);
     }
 
 
@@ -120,7 +131,18 @@ class BooksController extends Controller
     /**
      * xóa dữ liệu trong db
      */
-    public function destroy() {
+    public function destroy(Request $request, $id) {
+        var_dump($id);
+        echo "<pre>";
+        print_r($_POST);
+        echo "</pre>";
+        //die;
+
+        $book = BooksModel::find($id);
+
+        $book->delete();
+
+        return redirect('backend/index')->with('status', 'Xóa cuốn sách thành công!');
 
     }
 }

@@ -11,10 +11,13 @@
         <div class="col-md-12">
 
 
-            <form name="book" action="" method="post">
+            <form name="book" action="{{ url("/backend/delete/$book->id") }}" method="post">
+
+                {{ csrf_field() }}
+
                 <div class="form-group">
                     <label>book_name</label>
-                    DEMO tên sách
+                    {{ $book->book_name }}
                 </div>
 
                 <button type="submit" class="btn btn-danger">Xóa sách</button>
