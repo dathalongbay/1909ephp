@@ -150,6 +150,16 @@ class LearndbController extends Controller
     * */
     public function demo8() {
 
+        DB::enableQueryLog();
+        $books = DB::table('books')
+            ->select('books.book_name', 'books.book_author', 'users.email as email_tac_gia')
+            ->leftJoin('users', 'users.name', '=', 'books.book_author')
+            ->get();
+        dump($books);
+
+        dump(DB::getQueryLog());
+
+
     }
 
 
