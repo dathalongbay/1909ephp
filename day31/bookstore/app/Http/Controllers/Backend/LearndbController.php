@@ -65,13 +65,33 @@ class LearndbController extends Controller
      * */
     public function demo3() {
         echo __METHOD__;
+
+        $book = DB::table('books')->find(2);
+
+        DB::enableQueryLog(); // Enable query log
+
+// Your Eloquent query executed by using get()
+
+        dd(DB::getQueryLog()); // Show results of log
+
+        dd($book);
+
+        dump($book);
     }
 
     /*
      * Lấy ra 1 danh sách các cột trong bảng
      * */
     public function demo4() {
+        $book_names = DB::table('books')->pluck('book_name');
 
+        $book_slug = DB::table('books')->pluck('book_slug');
+
+
+        dump($book_names);
+
+
+        dump($book_slug);
     }
 
 
