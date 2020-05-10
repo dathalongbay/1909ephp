@@ -100,13 +100,24 @@ class LearndbController extends Controller
      * */
     public function demo5() {
 
+
+        $count = DB::table('books')->count();
+
+        dump($count);
+
+        $maxId = DB::table('books')->max('id');
+
+        dump($maxId);
+
     }
 
     /*
     * select db
     * */
     public function demo6() {
+        $books = DB::table('books')->select('book_name', 'book_images as anhcuasach')->get();
 
+        dump($books);
     }
 
 
