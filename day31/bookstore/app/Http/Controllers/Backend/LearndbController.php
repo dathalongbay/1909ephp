@@ -164,10 +164,19 @@ class LearndbController extends Controller
 
 
     /*
-    * Join laravel
+    * Where
     * */
     public function demo9() {
 
+        DB::enableQueryLog();
+
+        $books = DB::table('books')
+            ->where('book_author', 'like', 't%')
+            ->get();
+
+        dump($books);
+
+        dump(DB::getQueryLog());
     }
 
 
@@ -175,7 +184,17 @@ class LearndbController extends Controller
     * Where 1
     * */
     public function demo10() {
+        DB::enableQueryLog();
+        // multi where toán tử and
 
+        $books = DB::table('books')->where([
+            ['book_author', 'like', 't%'],
+            ['book_status', '=', '1'],
+        ])->get();
+
+        dump($books);
+
+        dump(DB::getQueryLog());
     }
 
 
@@ -184,6 +203,17 @@ class LearndbController extends Controller
    * */
     public function demo11() {
 
+        DB::enableQueryLog();
+
+        $books = DB::table('books')
+            ->where('book_author', 'like', 't%')
+            ->orWhere('book_name', '=', 'Nell Ford')
+            ->get();
+
+
+        dump($books);
+
+        dump(DB::getQueryLog());
     }
 
 
