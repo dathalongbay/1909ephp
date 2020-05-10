@@ -100,7 +100,7 @@ class LearndbController extends Controller
      * */
     public function demo5() {
 
-
+        DB::enableQueryLog();
         $count = DB::table('books')->count();
 
         dump($count);
@@ -108,16 +108,21 @@ class LearndbController extends Controller
         $maxId = DB::table('books')->max('id');
 
         dump($maxId);
-
+        dump(DB::getQueryLog());
     }
 
     /*
     * select db
     * */
     public function demo6() {
+
+        DB::enableQueryLog();
+
         $books = DB::table('books')->select('book_name', 'book_images as anhcuasach')->get();
 
         dump($books);
+
+        dump(DB::getQueryLog());
     }
 
 
