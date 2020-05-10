@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
+
 class LearndbController extends Controller
 {
     //
@@ -19,6 +21,23 @@ class LearndbController extends Controller
      * Lấy ra tất cả các bản ghi trong 1 bảng
      * */
     public function demo1() {
+        echo __METHOD__;
+
+        $books = DB::table('books')->get();
+
+        foreach ($books as $book) {
+            echo '<pre>';
+            echo $book->book_name;
+            echo $book->book_intro;
+        }
+
+        echo '<br>' . DB::table('books')->toSql();
+
+        dump($books);
+
+        dd($books);
+
+
 
     }
 
@@ -27,7 +46,7 @@ class LearndbController extends Controller
      * Lấy ra 1 bản ghi duy nhất trong 1 bảng cách 1
      * */
     public function demo2() {
-
+        echo __METHOD__;
     }
 
 
@@ -35,7 +54,7 @@ class LearndbController extends Controller
      * Lấy ra 1 bản ghi duy nhất trong 1 bảng cách 2
      * */
     public function demo3() {
-
+        echo __METHOD__;
     }
 
     /*
