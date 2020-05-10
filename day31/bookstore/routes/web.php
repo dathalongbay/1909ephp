@@ -39,3 +39,9 @@ Route::post("/backend/edit/{id}", "Backend\BooksController@update");
 // xóa dữ liệu thật
 // {id} biến trong url => /backend/delete/3
 Route::post("/backend/delete/{id}", "Backend\BooksController@destroy");
+
+
+/*
+ * DB
+ */
+Route::get('/db/{action?}', 'Backend\LearndbController@index');
