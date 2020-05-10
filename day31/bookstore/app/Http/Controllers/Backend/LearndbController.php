@@ -47,6 +47,16 @@ class LearndbController extends Controller
      * */
     public function demo2() {
         echo __METHOD__;
+
+        $book = DB::table('books')->where('book_status', 1)->first();
+
+        echo "<br>" . $book->book_name;
+
+        echo "<br>" .  DB::table('books')->where('book_status', 1)->toSql();
+
+        dump($book);
+
+        dd($book);
     }
 
 
