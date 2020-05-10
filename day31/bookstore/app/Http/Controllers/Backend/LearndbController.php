@@ -101,6 +101,7 @@ class LearndbController extends Controller
     public function demo5() {
 
         DB::enableQueryLog();
+
         $count = DB::table('books')->count();
 
         dump($count);
@@ -131,6 +132,16 @@ class LearndbController extends Controller
     * */
     public function demo7() {
 
+        DB::enableQueryLog();
+
+        $res = DB::table('books')
+            ->select(DB::raw('book_author, count(*) as total'))
+            ->groupBy('book_author')
+            ->get();
+
+        dump($res);
+
+        dump(DB::getQueryLog());
     }
 
 
