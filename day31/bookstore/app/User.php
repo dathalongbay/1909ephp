@@ -42,4 +42,10 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Models\Backend\BooksModel', 'created_by', 'id');
     }
+
+
+    public function roles()
+    {
+        return $this->belongsToMany('App\Models\Backend\RolesModel', 'roleusers', 'user_id', 'role_id');
+    }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Backend\BooksModel;
 use App\Models\Backend\CommentsModel;
+use App\Models\Backend\RolesModel;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -55,6 +56,24 @@ class LearnormController extends Controller
         $book = $comment->book;
         dump($comment);
         dump($book);
+    }
+
+
+    public function demo5() {
+        $user = User::find(1);
+        $roles = $user->roles;
+
+        dump($user);
+        dump($roles);
+    }
+
+
+    public function demo6() {
+        $role = RolesModel::find(1);
+        $users = $role->users;
+
+        dump($role);
+        dump($users);
     }
 
 
