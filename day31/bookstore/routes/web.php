@@ -45,3 +45,4 @@ Route::post("/backend/delete/{id}", "Backend\BooksController@destroy");
  * DB
  */
 Route::get('/db/{action?}', 'Backend\LearndbController@index');
+Route::get('/orm/{action?}', 'Backend\LearnormController@index');

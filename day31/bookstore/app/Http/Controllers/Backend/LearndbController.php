@@ -225,12 +225,8 @@ class LearndbController extends Controller
     }
 
 
-    /*
-  * Group
-  * */
-    public function demo13() {
 
-    }
+
 
 
     /*
