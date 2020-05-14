@@ -18,7 +18,7 @@ class LearnormController extends Controller
     // one to one
     public function demo1() {
 
-        $book2 = BooksModel::find(7);
+        $book2 = BooksModel::find(3);
         $author = $book2->author;
 
 

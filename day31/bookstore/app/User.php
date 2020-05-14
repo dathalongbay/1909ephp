@@ -40,6 +40,6 @@ class User extends Authenticatable
 
     public function book()
     {
-        return $this->belongsTo('App\Models\Backend\BooksModel', 'created_by', 'id');
+        return $this->hasOne('App\Models\Backend\BooksModel', 'created_by', 'id');
     }
 }

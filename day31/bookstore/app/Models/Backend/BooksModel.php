@@ -12,6 +12,8 @@ class BooksModel extends Model
 
     public function author()
     {
-        return $this->hasOne('App\User', 'id', 'created_by');
+        /*return $this->hasOne('', 'id', 'created_by');*/
+
+        return $this->belongsTo('App\User', 'created_by', 'id');
     }
 }
