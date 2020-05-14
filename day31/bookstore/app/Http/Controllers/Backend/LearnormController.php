@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Backend\BooksModel;
+use App\User;
 use Illuminate\Http\Request;
 
 class LearnormController extends Controller
@@ -23,6 +24,18 @@ class LearnormController extends Controller
 
         dump($book2);
         dump($author);
+
+    }
+
+    public function demo2() {
+
+
+        $user = User::find(2);
+        $book = $user->book;
+
+
+        dump($user);
+        dump($book);
 
     }
 

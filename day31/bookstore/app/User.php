@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function book()
+    {
+        return $this->belongsTo('App\Models\Backend\BooksModel', 'created_by', 'id');
+    }
 }
