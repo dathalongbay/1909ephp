@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Backend\BooksModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BooksController extends Controller
 {
@@ -43,6 +44,7 @@ class BooksController extends Controller
     public function edit($id) {
 
         var_dump($id);
+
 
         /**
          * trả về view
@@ -95,7 +97,11 @@ class BooksController extends Controller
         $book->book_slug = $request->book_slug;
         $book->book_intro = $request->book_intro;
         $book->book_desc = $request->book_desc;
-        $book->book_main_image = $request->book_main_image;
+        if ($request->file('book_main_image')->isValid()) {
+            $book->book_main_image = $request->book_main_image->store('public/images');
+        } else {
+            $book->book_main_image = '';
+        }
         $book->book_images = $request->book_images;
         $book->book_author = $request->book_author;
         $book->book_price_core = $request->book_price_core;
@@ -117,8 +123,13 @@ class BooksController extends Controller
         $book->book_slug = $request->book_slug;
         $book->book_intro = $request->book_intro;
         $book->book_desc = $request->book_desc;
-        $book->book_main_image = $request->book_main_image;
-        $book->book_images = $request->book_images;
+        if ($request->hasFile('book_main_image')) {
+            $book->book_main_image = $request->book_main_image->store('public/images');
+        }
+
+        if ($request->hasFile('book_images')) {
+            $book->book_images = $request->book_images->store('public/images');
+        }
         $book->book_author = $request->book_author;
         $book->book_price_core = $request->book_price_core;
         $book->book_price_sell = $request->book_price_sell;

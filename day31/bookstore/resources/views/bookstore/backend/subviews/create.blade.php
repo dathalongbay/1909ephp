@@ -32,8 +32,8 @@
                 <textarea class="form-control" name="book_desc"></textarea>
             </div>
             <div class="form-group">
-                <label>book_main_image</label>
-                <input type="text" name="book_main_image" class="form-control" value="">
+                <label>book_main_image 1</label>
+                <input type="file" name="book_main_image" class="form-control" value="">
             </div>
             <div class="form-group">
                 <label>book_images</label>
