@@ -40,7 +40,7 @@
                 </div>
                 <div class="form-group">
                     <label>book_images</label>
-                    <input type="file" name="book_images" class="form-control">
+                    <input type="file" name="book_images[]" class="form-control">
                     @if($book->book_images)
                     <img src="{{ asset('storage/images/'. basename($book->book_images)) }}" />
                     @endif
