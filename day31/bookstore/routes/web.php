@@ -48,3 +48,5 @@ Route::get('/db/{action?}', 'Backend\LearndbController@index');
 Route::get('/orm/{action?}', 'Backend\LearnormController@index');
 
 Route::get('/backend/sbadmin2', "Backend\Sbadmin2Controller@index");
+Route::get('/backend/sbadmin2/login', "Backend\Sbadmin2Controller@login");
+Route::get('/backend/sbadmin2/register', "Backend\Sbadmin2Controller@register");

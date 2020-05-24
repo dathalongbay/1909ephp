@@ -17,4 +17,17 @@ class Sbadmin2Controller extends Controller
 
         return view('bookstore.sbadmin2.subviews.dashboard');
     }
+
+
+    public function login() {
+
+
+        return view('bookstore.sbadmin2.subviews.login');
+    }
+
+    public function register() {
+
+
+        return view('bookstore.sbadmin2.subviews.register');
+    }
 }
