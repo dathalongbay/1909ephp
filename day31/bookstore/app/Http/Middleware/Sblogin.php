@@ -15,15 +15,20 @@ class Sblogin
      */
     public function handle($request, Closure $next)
     {
-        $username = $request->input('username');
-        $password = $request->input('password');
 
-        if ($username == 'admin' && $password == '123') {
+
+        $ss_sblogin = session('sblogin');
+      /* echo __METHOD__;
+        dump($ss_sblogin);
+        die;*/
+
+
+        if (isset($ss_sblogin) && ($ss_sblogin)) {
 
             // đi tiếp request theo mong muốn của  người dùng
             return $next($request);
         }
 
-        return redirect('sblogin');
+        return redirect('/backend/sbadmin2/login')->with('status', 'Vui lòng đăng nhập để tiếp tục!');
     }
 }
