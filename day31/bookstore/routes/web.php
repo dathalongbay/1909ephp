@@ -46,3 +46,5 @@ Route::post("/backend/delete/{id}", "Backend\BooksController@destroy");
  */
 Route::get('/db/{action?}', 'Backend\LearndbController@index');
 Route::get('/orm/{action?}', 'Backend\LearnormController@index');
+
+Route::get('/backend/sbadmin2', "Backend\Sbadmin2Controller@index");
