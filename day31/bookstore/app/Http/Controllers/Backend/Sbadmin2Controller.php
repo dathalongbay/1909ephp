@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class Sbadmin2Controller extends Controller
 {
@@ -48,7 +51,27 @@ class Sbadmin2Controller extends Controller
         $username = $request->input('username');
         $password = $request->input('password');
 
-        if ($username == 'admin' && $password == '123') {
+        echo "<pre>";
+        print_r($password);
+        echo "</pre>";
+
+        echo "<pre>";
+        print_r($_POST);
+        echo "</pre>";
+        DB::enableQueryLog(); // Enable query log
+
+// Your Eloquent query executed by using get()
+
+
+        $user = DB::table('users')->where('email', $username)->first();
+        dump($user);
+        dump(DB::getQueryLog()); // Show results of log
+
+        var_dump(Hash::check($password,$user->password));
+
+        if (Hash::check($password,$user->password))
+        {
+            // The hashed values match...
             // tạo ra 1 session login thành công
             session(['sblogin' => [
                 'username' => 'admin',
@@ -80,5 +103,20 @@ class Sbadmin2Controller extends Controller
      */
     public function registerTask(Request $request) {
 
+
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $password = Hash::make($password);
+
+
+        $user = new User();
+
+        $user->name = $name;
+        $user->email = $email;
+        $user->password = $password;
+        $user->save();
+
+        return redirect('/backend/sbadmin2/login')->with('status', 'Tạo tài khoản thành công!');
     }
 }
